@@ -1,0 +1,25 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingTwo from "@/atoms/headings/two/uppercase/royal-blue/index.astro"
+
+const data = {
+
+    title: "PROJECTS COVERAGE"
+
+}
+---
+<Container>
+    <section>
+        <HeadingTwo>{ data.title }</HeadingTwo>
+        <div class="w-full h-full overflow-hidden">
+            <img
+                src="/projects-coverage.png"
+                alt=""
+                class="w-full h-full object-cover"
+            />
+        </div>
+    </section>
+</Container>
