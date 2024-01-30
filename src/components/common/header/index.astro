@@ -1,0 +1,35 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Li from "@/components/common/header/li/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import DarkBlueButton from "@/atoms/buttons/dark-blue/index.astro"
+---
+<header class="hidden bg-black h-24 md:flex items-center">
+    <Container>
+        <section class="flex justify-between items-center h-full">
+            <div>
+                <img
+                    src="/logo/expandx-logo.jpg"
+                    alt=""
+                    class="h-12 w-40"
+                />
+            </div>
+            <nav class="flex gap-6 items-center">
+                <ul class="flex gap-6">
+                    <Li href="/">Home</Li>
+                    <Li href="/services">Services</Li>
+                    <Li href="/clients">Clients</Li>
+                    <Li href="/portfolio-of-expandx">Portfolio</Li>
+                    <Li href="/reviews">Reviews</Li>
+                    <Li href="/team">Team</Li>
+                    <Li href="/blog">Blog</Li>
+                </ul>
+                <DarkBlueButton href="">Contact</DarkBlueButton>
+            </nav>
+        </section>
+    </Container>
+</header>
