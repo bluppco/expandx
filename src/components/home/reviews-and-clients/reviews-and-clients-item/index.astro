@@ -1,0 +1,21 @@
+---
+// IMPORTS ASTRO ATOMS
+import HeadingThree from "@/atoms/headings/three/uppercase/vanilla/center/index.astro"
+import PrimaryButton from "@/atoms/buttons/primary/index.astro"
+import Link from "@/atoms/links/index.astro"
+
+const {
+
+    title,
+    button_text,
+    button_link,
+    aria_label
+
+} = Astro.props
+---
+<div class="flex flex-col items-center gap-6">
+    <HeadingThree>{ title }</HeadingThree>
+    <Link href={ button_link } aria_label={ aria_label }>
+        <PrimaryButton>{ button_text }</PrimaryButton>
+    </Link>
+</div>
