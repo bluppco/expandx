@@ -7,6 +7,9 @@ import Li from "@/components/common/header/li/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import DarkBlueButton from "@/atoms/buttons/dark-blue/index.astro"
+
+// IMPORTS JSX COMPONENTS
+import MobileHeader from "../mobile-header/index"
 ---
 <header class="hidden bg-black h-24 md:flex items-center">
     <Container>
@@ -35,3 +38,4 @@ import DarkBlueButton from "@/atoms/buttons/dark-blue/index.astro"
         </section>
     </Container>
 </header>
+<MobileHeader client:load />
