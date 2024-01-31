@@ -29,6 +29,12 @@ module.exports = {
 
 		extend: {
 
+			screens: {
+
+				"mac": "1440px"
+
+			},
+
 			colors: {
 
 				"ex_light_blue": "#62a3c1",
