@@ -1,7 +1,4 @@
 ---
-// IMPORTS JSX COMPONENTS
-import Titles from "../titles/index"
-
 // IMPORTS ASTRO ATOMS
 import Link from "@/atoms/links/index.astro"
 import SecondaryButton from "@/atoms/buttons/secondary/index.astro"
@@ -17,9 +14,10 @@ const { data } = Astro.props
             class="w-full h-full object-contain"
         />
     </div>
-    <HeadingTwo>{ data.sub_title }</HeadingTwo>
-    <Link href={ data.button_two_link } aria_label="">
-        <SecondaryButton>{ data.button_two_text }</SecondaryButton>
-    <Link>
+    <div class="hidden md:flex flex-col items-center gap-6">
+        <HeadingTwo>{ data.sub_title }</HeadingTwo>
+        <Link href={ data.button_two_link } aria_label="">
+            <SecondaryButton>{ data.button_two_text }</SecondaryButton>
+        <Link>
+    </div>
 </section>
-../../../common/titles/index

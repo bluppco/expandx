@@ -9,14 +9,25 @@ import Link from "@/atoms/links/index.astro"
 
 const { data } = Astro.props
 ---
-<section class="col-span-3 space-y-8 pt-10">
+<section class="md:col-span-3 space-y-8 pt-10">
     <div class="border-b border-ex_red pb-10">
         <Titles client:load />
+        <div class="md:hidden flex flex-col items-center gap-3 pt-8">
+            <Link href={ data.button_one_link } aria_label="">
+                <SecondaryButton>{ data.button_one_text }</SecondaryButton>
+            <Link>
+            <Link href={ data.button_two_link } aria_label="">
+                <SecondaryButton>{ data.button_two_text }</SecondaryButton>
+            <Link>
+            <Link href={ data.button_one_link } aria_label="">
+                <SecondaryButton>{ data.button_one_text }</SecondaryButton>
+            <Link>
+        </div>
     </div>
-    <div class="pt-4 px-20">
+    <div class="pt-4 md:px-20">
         <CenterParagraph>{ data.description }</CenterParagraph>
     </div>
-    <div class="flex justify-center">
+    <div class="hidden md:flex justify-center">
         <Link href={ data.button_one_link } aria_label="">
             <SecondaryButton>{ data.button_one_text }</SecondaryButton>
         <Link>

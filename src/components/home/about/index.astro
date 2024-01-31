@@ -15,10 +15,10 @@ const data = {
 
 }
 ---
-<section class="py-20 relative bg-cover" style=`background-image: url(${ data.cover + "?quality=" + IMAGE_QUALITY })`>
+<section class="py-10 md:py-20 relative bg-cover" style=`background-image: url(${ data.cover + "?quality=" + IMAGE_QUALITY })`>
     <section class="absolute top-0 h-full w-full bg-gradient-to-r from-ex_sky_blue to-black/70 opacity-90" />
     <Container>
-        <section class="grid grid-cols-2 gap-20 relative z-10">
+        <section class="grid md:grid-cols-2 gap-8 md:gap-20 relative z-10">
             <Paragraph>{ data.description }</Paragraph>
             <section class="rounded-2xl overflow-hidden">
                 <iframe
