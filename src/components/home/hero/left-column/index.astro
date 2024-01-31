@@ -1,0 +1,24 @@
+---
+// IMPORTS JSX COMPONENTS
+import Titles from "../titles/index"
+
+// IMPORTS ASTRO ATOMS
+import CenterParagraph from "@/atoms/paragraphs/white/small/bold/center/index.astro"
+import SecondaryButton from "@/atoms/buttons/secondary/index.astro"
+import Link from "@/atoms/links/index.astro"
+
+const { data } = Astro.props
+---
+<section class="col-span-3 space-y-8 pt-10">
+    <div class="border-b border-ex_red pb-10">
+        <Titles client:load />
+    </div>
+    <div class="pt-4 px-20">
+        <CenterParagraph>{ data.description }</CenterParagraph>
+    </div>
+    <div class="flex justify-center">
+        <Link href={ data.button_one_link } aria_label="">
+            <SecondaryButton>{ data.button_one_text }</SecondaryButton>
+        <Link>
+    </div>
+</section>
