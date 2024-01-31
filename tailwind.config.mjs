@@ -40,6 +40,8 @@ module.exports = {
 				"ex_light_blue": "#62a3c1",
 				"ex_dark_blue": "#1574c1bd",
 				"ex_royal_blue": "#002584",
+				"ex_sky_blue": "#5d94c1",
+				"ex_red": "#d60b4c",
 
 			},
 
