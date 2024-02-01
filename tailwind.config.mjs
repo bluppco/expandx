@@ -46,12 +46,14 @@ module.exports = {
 				"ex_ocean_blue": "#2ea3f2",
 				"ex_midnight_blue": "#000438",
 				"ex_red": "#d60b4c",
+				"ex_slate": "#6a797e",
 
 			},
 
 			fontFamily: {
 
-				"open_sans": [ "Open Sans", "sans-serif" ]
+				"open_sans": [ "Open Sans", "sans-serif" ],
+				"roboto": [ "Roboto", "sans-serif" ]
 
 			},
 
