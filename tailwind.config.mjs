@@ -44,6 +44,7 @@ module.exports = {
 				"ex_blue": "#0c71c3",
 				"ex_baby_blue": "#0da0c5",
 				"ex_ocean_blue": "#2ea3f2",
+				"ex_midnight_blue": "#000438",
 				"ex_red": "#d60b4c",
 
 			},

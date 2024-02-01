@@ -1,19 +1,67 @@
 ---
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/Container.astro"
-
-const runtime = Astro.locals.runtime
-const env = runtime.env.ENVIRONMENT
 ---
-{
-
-    env === "staging" &&
-    <section class="bg-gradient-to-r from-violet-200 to-pink-200 h-12 md:h-10 fixed top-0 w-full z-50">
-        <Container>
-            <div class="flex items-center justify-center h-full">
-                <p class="text-xs md:text-sm text-center">This is staging environment created by <span class="underline underline-offset-4 font-semibold"><a href="https://blupp.co" target="_blank">Blupp Company</a></span> with some initial <span class="underline underline-offset-4 font-semibold"><a href="/benchmarking">benchmarking</a></span>. You can check the codebase on <span class="underline underline-offset-4 font-semibold"><a href="https://github.com/bluppco/expandx.com" target="_blank">Github</a></span>.</p>
+<section class="bg-ex_midnight_blue h-8 flex items-center fixed w-full top-10 z-10">
+    <Container>
+        <div class="h-full flex gap-4 items-center">
+            <div class="h-full flex gap-1 items-center">
+                <div class="flex items-center gap-1">
+                    <div class="size-4">
+                        <img
+                            src="/icons/phone.svg"
+                            alt=""
+                            class="size-4"
+                        />
+                    </div>
+                    <a href="tel:+44(0)2039510901">
+                        <p class="text-ex_light_blue font-open_sans text-xs">+44 (0)20 3951 0901</p>
+                    </a>
+                    <p class="text-ex_light_blue font-open_sans text-xs">|</p>
+                    <a href="tel:+359(0)29964222">
+                        <p class="text-ex_light_blue font-open_sans text-xs">+359 (0)2 996 4222</p>
+                    </a>
+                </div>
             </div>
-        </Container>
-    </section>
-
-}
+            <div class="flex items-center gap-1">
+                <div class="size-4">
+                    <img
+                        src="/icons/email.svg"
+                        alt=""
+                        class="size-4"
+                    />
+                </div>
+                <p class="text-ex_light_blue font-open_sans text-xs">office@expandx.com </p>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/ExpandX" target="_blank">
+                    <div class="size-4">
+                        <img
+                            src="/icons/facebook.svg"
+                            alt=""
+                            class="size-4"
+                        />
+                    </div>
+                </a>
+                <a href="https://twitter.com/Expand_X" target="_blank">
+                    <div class="size-3.5">
+                        <img
+                            src="/icons/x.svg"
+                            alt=""
+                            class="size-3.5"
+                        />
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/expandx.marketing.web/" target="_blank">
+                    <div class="size-4">
+                        <img
+                            src="/icons/instagram.svg"
+                            alt=""
+                            class="size-4"
+                        />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </Container>
+</section>
