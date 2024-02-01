@@ -1,0 +1,71 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
+
+// IMPORTS JSX COMPONENTS
+import Titles from "./titles/index"
+
+// IMPORTS ASTRO COMPONENTS
+import ServiceItem from "./service-item/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingTwo from "@/atoms/headings/two/uppercase/royal-blue/index.astro"
+
+const data = {
+
+    title: "SERVICES."
+
+}
+
+const specific_services = {
+
+    title: "SPECIFIC SERVICE?",
+    button_text: "Check",
+    button_link: "/services"
+
+}
+
+const ongoing_projects = {
+
+    title: "ONGOING PROJECTS?",
+    button_text: "Get Offer",
+    button_link: "/services"
+
+}
+
+const services_pack = {
+
+    title: "SERVICES PACKS?",
+    button_text: "Check",
+    button_link: "/services"
+
+}
+---
+<Container>
+    <section class="py-20 space-y-20">
+        <Titles client:load />
+        <section class="grid md:grid-cols-4 gap-6 md:gap-16">
+            <div class="border-b border-ex_red pb-8 mb-6 md:mb-0 h-fit">
+                <HeadingTwo>{ data.title }</HeadingTwo>
+            </div>
+            <ServiceItem
+                title={ specific_services.title }
+                button_text={ specific_services.button_text }
+                button_link={ specific_services.button_link }
+                aria_label=""
+            />
+            <ServiceItem
+                title={ ongoing_projects.title }
+                button_text={ ongoing_projects.button_text }
+                button_link={ ongoing_projects.button_link }
+                aria_label=""
+            />
+            <ServiceItem
+                title={ services_pack.title }
+                button_text={ services_pack.button_text }
+                button_link={ services_pack.button_link }
+                aria_label=""
+            />
+        </section>
+    </section>
+</Container>

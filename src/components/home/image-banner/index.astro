@@ -1,0 +1,7 @@
+---
+// IMPORTS CONSTANTS
+import { IMAGE_QUALITY } from "@/constants/image"
+
+const { src } = Astro.props
+---
+<section class="w-full h-72 md:h-screen bg-contain md:bg-cover bg-no-repeat" style=`background-image: url(${ src + "?quality=" + IMAGE_QUALITY })`/>
