@@ -1,16 +1,15 @@
 import { TypeAnimation } from "react-type-animation"
 
-const Titles = () => {
+const Titles = ( props ) => {
+
+    const { data } = props
 
     return (
         <div className="flex justify-center">
+
             <TypeAnimation
                 sequence={[
-                    'FOR BUSINESS GROWTH',
-                    2000,
-                    'FOR BUSINESS GROWTH',
-                    2000,
-                    "FOR BUSINESS GROWTH",
+                    'DIGITAL, WEB & TECH SOLUTIONS',
                     2000,
                     'FOR BUSINESS GROWTH',
                     2000,

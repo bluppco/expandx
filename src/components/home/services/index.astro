@@ -11,59 +11,38 @@ import ServiceItem from "./service-item/index.astro"
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/headings/two/uppercase/royal-blue/index.astro"
 
-const data = {
+const {
 
-    title: "SERVICES."
+    data,
+    specific_services,
+    ongoing_projects,
+    services_pack
 
-}
-
-const specific_services = {
-
-    title: "SPECIFIC SERVICE?",
-    button_text: "Check",
-    button_link: "/services"
-
-}
-
-const ongoing_projects = {
-
-    title: "ONGOING PROJECTS?",
-    button_text: "Get Offer",
-    button_link: "/services"
-
-}
-
-const services_pack = {
-
-    title: "SERVICES PACKS?",
-    button_text: "Check",
-    button_link: "/services"
-
-}
+} = Astro.props
 ---
 <Container>
     <section class="py-20 space-y-20">
-        <Titles client:load />
+        <Titles data={ data.title } client:load />
         <section class="grid md:grid-cols-4 gap-6 md:gap-16">
             <div class="border-b border-ex_red pb-8 mb-6 md:mb-0 h-fit">
                 <HeadingTwo>{ data.title }</HeadingTwo>
             </div>
             <ServiceItem
                 title={ specific_services.title }
-                button_text={ specific_services.button_text }
-                button_link={ specific_services.button_link }
+                button_text={ specific_services.button_one_text }
+                button_link={ specific_services.button_one_link }
                 aria_label=""
             />
             <ServiceItem
                 title={ ongoing_projects.title }
-                button_text={ ongoing_projects.button_text }
-                button_link={ ongoing_projects.button_link }
+                button_text={ ongoing_projects.button_one_text }
+                button_link={ ongoing_projects.button_one_link }
                 aria_label=""
             />
             <ServiceItem
                 title={ services_pack.title }
-                button_text={ services_pack.button_text }
-                button_link={ services_pack.button_link }
+                button_text={ services_pack.button_one_text }
+                button_link={ services_pack.button_one_link }
                 aria_label=""
             />
         </section>

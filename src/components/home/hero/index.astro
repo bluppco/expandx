@@ -6,16 +6,7 @@ import Container from "@/layouts/Container.astro"
 import LeftColumn from "./left-column/index.astro"
 import RightColumn from "./right-column/index.astro"
 
-const data = {
-
-    description: "Great web products, digital assets and marketing campaigns, create feelings people like, remember and talk about. ExpandX!",
-    button_one_text: "SEE REVIEWS",
-    button_one_link: "/clutch-reviews-expandx",
-    button_two_text: "CHECK HOW",
-    button_two_link: "",
-    sub_title: "WANT TO GROW YOUR BUSINESS?"
-
-}
+const { data } = Astro.props
 ---
 <section class="bg-black py-20 mt-40">
     <Container>

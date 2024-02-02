@@ -8,12 +8,7 @@ import Container from "@/layouts/Container.astro"
 // IMPORTS ASTRO ATOMS
 import Paragraph from "@/atoms/paragraphs/white/small/index.astro"
 
-const data = {
-
-    cover: "/about.jpeg",
-    description: "ExpandX is a full-service digital marketing agency and a web solutions provider delivering impressive ROI to its clients since 2014. Our team of experts in marketing strategy, web development solutions, online advertising, digital marketing, graphic and web design, content marketing, creative solutions and marketing management, works in a unique synergy and efficiency empowering our clients with the right set of marketing skills and expertise. We can build your corporate website or online shop and will also extend the service to creating  working, consistent, sustainable and efficient marketing campaigns and solutions for your organization. We will work together with you and your business to create the right and working 360° marketing impact needed for every specific request or project.  Our analytical tools, strong customer insight and expertise will do much more for you than just a website, promo & advertising campaign or social media management. ExpandX!"
-
-}
+const { data } = Astro.props
 ---
 <section class="py-10 md:py-20 relative bg-cover" style=`background-image: url(${ data.cover + "?quality=" + IMAGE_QUALITY })`>
     <section class="absolute top-0 h-full w-full bg-gradient-to-r from-ex_sky_blue to-black/70 opacity-70" />
@@ -24,7 +19,7 @@ const data = {
                 <iframe
                     width="800"
                     height="300"
-                    src="https://www.youtube.com/embed/bQlAdeNLs8c?si=pqJGNS7VsgzDNH7y"
+                    src={ data.video_link }
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

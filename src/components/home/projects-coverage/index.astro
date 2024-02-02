@@ -5,11 +5,10 @@ import Container from "@/layouts/Container.astro"
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/headings/two/uppercase/royal-blue/index.astro"
 
-const data = {
+// IMPORTS CONSTANTS
+import { CDN_LINK, IMAGE_QUALITY } from "@/constants/image"
 
-    title: "PROJECTS COVERAGE"
-
-}
+const { data } = Astro.props
 ---
 <section class="hidden md:block py-20">
     <Container>
@@ -21,5 +20,12 @@ const data = {
                 class="w-full h-full object-cover"
             />
         </div>
+        <!-- <div class="w-full h-screen overflow-hidden">
+            <img
+                src={ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY }
+                alt=""
+                class="w-full h-full object-cover"
+            />
+        </div> -->
     </Container>
 </section>
