@@ -12,7 +12,7 @@ const HeaderMobile = ( props ) => {
     const [ isOpen, updateOpen ] = useState( false )
 
     return (
-        <header className="md:hidden bg-black px-6 py-4 relative z-20 w-full border-b border-b-ex_ocean_blue">
+        <header className="md:hidden bg-black px-6 py-4 fixed top-24 z-20 w-full border-b border-b-ex_ocean_blue">
             <div className="flex justify-between items-center z-20">
                 <a href="/">
                     <div className="h-10 w-32">

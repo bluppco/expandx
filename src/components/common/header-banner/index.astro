@@ -2,10 +2,10 @@
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/Container.astro"
 ---
-<section class="bg-ex_midnight_blue h-8 flex items-center fixed w-full top-10 z-30">
+<section class="bg-ex_midnight_blue py-2 md:h-8 flex items-center fixed w-full top-12 md:top-10 z-30">
     <Container>
-        <div class="h-full flex gap-4 items-center">
-            <div class="h-full flex gap-1 items-center">
+        <div class="h-full flex flex-col md:flex-row gap-1 md:gap-4 items-center">
+            <div class="md:h-full flex gap-1 items-center">
                 <div class="flex items-center gap-1">
                     <div class="size-4">
                         <img
@@ -33,7 +33,7 @@ import Container from "@/layouts/Container.astro"
                 </div>
                 <p class="text-ex_light_blue font-open_sans text-xs">office@expandx.com </p>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="items-center gap-4 hidden md:flex">
                 <a href="https://www.facebook.com/ExpandX" target="_blank">
                     <div class="size-4">
                         <img
