@@ -47,6 +47,8 @@ module.exports = {
 				"ex_midnight_blue": "#000438",
 				"ex_red": "#d60b4c",
 				"ex_slate": "#6a797e",
+				"ex_steel_blue": "#4590c1",
+				"ex_azure_blue": "#040028"
 
 			},
 

@@ -7,14 +7,27 @@ import ColumnOne from "./column-one/index.astro"
 import ColumnTwo from "./column-two/index.astro"
 import ColumnThree from "./column-three/index.astro"
 import ColumnFour from "./column-four/index.astro"
+import FooterBanner from "./footer-banner/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
 ---
-<footer class="bg-black py-10">
+<footer class="bg-black">
     <Container>
-        <section class="grid grid-cols-4 gap-10">
+        <section class="grid grid-cols-4 gap-10 pt-20">
             <ColumnOne />
             <ColumnTwo />
             <ColumnThree />
             <ColumnFour />
         </section>
+        <div class="flex gap-6 pt-10 pb-4">
+            <Link href="/cookie-policy" aria_label="">
+                <p class="text-xs text-white font-open_sans font-medium uppercase">COOKIE POLICY</p>
+            </Link>
+            <Link href="/cookie-policy" aria_label="">
+                <p class="text-xs text-white font-open_sans font-medium uppercase">PRIVACY POLICY</p>
+            </Link>
+        </div>
     </Container>
+    <FooterBanner />
 </footer>

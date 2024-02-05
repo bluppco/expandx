@@ -1,12 +1,16 @@
+---
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
+---
 <section class="space-y-4">
     <div class="h-16 w-full">
-        <a href="/">
+        <Link href="/" aria_label="">
             <img
                 src="/logo/expandx-logo.jpg"
                 alt=""
                 class="h-full w-full"
             />
-        </a>
+        </Link>
     </div>
     <div class="h-[1px] bg-white w-[80%] mx-auto mt-8 mb-4"></div>
     <div class="space-y-4">
@@ -17,7 +21,7 @@
         <img
             src="/images/clutch-awards.png"
             alt=""
-            class="w-full h-full"
+            class="w-full h-full object-contain"
         />
     </div>
 </section>
