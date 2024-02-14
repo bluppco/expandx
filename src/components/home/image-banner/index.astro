@@ -1,7 +1,8 @@
 ---
 // IMPORTS CONSTANTS
-import { IMAGE_QUALITY } from "@/constants/image"
+import { CDN_LINK, IMAGE_QUALITY } from "@/constants/image"
 
-const { src } = Astro.props
+const { data, src } = Astro.props
 ---
-<section class="w-full h-72 md:h-screen bg-contain md:bg-cover bg-no-repeat" style=`background-image: url(${ src + "?quality=" + IMAGE_QUALITY })`/>
+<!-- <section class="w-full h-72 md:h-screen bg-contain md:bg-cover bg-no-repeat bg-zinc-200" style=`background-image: url(${ CDN_LINK + data.cover + "?quality=" + IMAGE_QUALITY })`/> -->
+<section class="w-full h-72 md:h-screen bg-contain md:bg-cover bg-no-repeat bg-zinc-200" style=`background-image: url(${ src + "?quality=" + IMAGE_QUALITY })`/>

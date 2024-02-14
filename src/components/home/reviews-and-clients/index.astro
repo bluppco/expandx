@@ -7,59 +7,71 @@ import ReviewsAndClientsItem from "./reviews-and-clients-item/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import HeadingTwo from "@/atoms/headings/two/uppercase/royal-blue/index.astro"
+import Star from "@/atoms/star/index.astro"
 
-const data = {
+const {
 
-    title: "REVIEWS & CLIENTS."
+    data,
+    clients,
+    portfolio,
+    reviews
 
-}
-
-const all_clients = {
-
-    title: "ALL CLIENTS",
-    button_text: "Check",
-    button_link: "/clients"
-
-}
-
-const portfolio = {
-
-    title: "ALL CLIENTS",
-    button_text: "Check",
-    button_link: "/clients"
-
-}
-
-const reviews = {
-
-    title: "ALL CLIENTS",
-    button_text: "Check",
-    button_link: "/clients"
-
-}
+} = Astro.props
 ---
 <Container>
     <section class="py-20 space-y-20">
         <HeadingTwo>{ data.title }</HeadingTwo>
-        <section class="grid md:grid-cols-3 gap-6 md:gap-16">
+        <section class="grid md:grid-cols-4 gap-6 md:gap-16">
             <ReviewsAndClientsItem
-                title={ all_clients.title }
-                button_text={ all_clients.button_text }
-                button_link={ all_clients.button_link }
+                title={ clients.title }
+                button_text={ clients.button_one_text }
+                button_link={ clients.button_one_link }
                 aria_label=""
             />
             <ReviewsAndClientsItem
                 title={ portfolio.title }
-                button_text={ portfolio.button_text }
-                button_link={ portfolio.button_link }
+                button_text={ portfolio.button_one_text }
+                button_link={ portfolio.button_one_link }
                 aria_label=""
             />
             <ReviewsAndClientsItem
                 title={ reviews.title }
-                button_text={ reviews.button_text }
-                button_link={ reviews.button_link }
+                button_text={ reviews.button_one_text }
+                button_link={ reviews.button_one_link }
                 aria_label=""
             />
+            <div class="grid grid-cols-2 gap-6 h-fit">
+                <div class="space-y-1">
+                    <p class="text-ex_slate uppercase text-xs font-roboto tracking-wider">Reviewed on</p>
+                    <div>
+                        <a href="https://clutch.co/profile/expandx?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo&utm_term=expandx.com" target="_blank">
+                            <div class="w-24 h-6">
+                                <img
+                                    src="/icons/clutch.svg"
+                                    alt=""
+                                    class="w-24 h-6"
+                                />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <a href="https://clutch.co/profile/expandx?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=stars&utm_term=expandx.com#reviews" target="_blank">
+                        <div class="flex items-center gap-1">
+                            <Star />
+                            <Star />
+                            <Star />
+                            <Star />
+                            <Star />
+                        </div>
+                    </a>
+                    <div>
+                        <a href="https://clutch.co/profile/expandx?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=num_reviews&utm_term=expandx.com#reviews" target="_blank">
+                            <p class="text-ex_slate uppercase text-sm font-roboto tracking-wider">45 reviews</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
 </Container>

@@ -11,7 +11,7 @@ import DarkBlueButton from "@/atoms/buttons/dark-blue/index.astro"
 // IMPORTS JSX COMPONENTS
 import MobileHeader from "../mobile-header/index"
 ---
-<header class="hidden bg-black h-24 md:flex items-center">
+<header class="hidden bg-black h-24 md:flex items-center fixed top-[72px] w-full z-50">
     <Container>
         <section class="flex justify-between items-center h-full">
             <div>
@@ -33,7 +33,14 @@ import MobileHeader from "../mobile-header/index"
                     <Li href="/team">Team</Li>
                     <Li href="/blog">Blog</Li>
                 </ul>
-                <DarkBlueButton href="">Contact</DarkBlueButton>
+                <DarkBlueButton href="/contact">Contact</DarkBlueButton>
+                <div class="w-5 h-3">
+                    <img
+                        src="/images/en.png"
+                        alt=""
+                        class="w-full h-full"
+                    />
+                </div>
             </nav>
         </section>
     </Container>

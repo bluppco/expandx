@@ -1,0 +1,11 @@
+---
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
+
+const { href, aria_label } = Astro.props
+---
+<li class="marker:text-ex_red text-ex_light_blue uppercase font-open_sans text-sm list-disc">
+    <Link href={ href } aria_label={ aria_label }>
+        <slot/>
+    </Link>
+</li>

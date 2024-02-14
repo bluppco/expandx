@@ -1,8 +1,17 @@
 ---
+import { homeAPI } from "../api/home"
+
+const runtime = Astro.locals.runtime
+const data = await homeAPI( runtime.env.ENVIRONMENT )
+const env = runtime.env.ENVIRONMENT
+
+const { home_data, meta } = data
+
 // IMPORTS ASTRO LAYOUTS
 import Layout from "@/layouts/Layout.astro"
 
 // IMPORTS ASTRO COMPONENTS
+import BluppHeaderBanner from "@/components/common/blupp-header-banner/index.astro"
 import HeaderBanner from "@/components/common/header-banner/index.astro"
 import Header from "@/components/common/header/index.astro"
 import Hero from "@/components/home/hero/index.astro"
@@ -14,17 +23,28 @@ import ReviewsAndClients from "@/components/home/reviews-and-clients/index.astro
 import Footer from "@/components/common/footer/index.astro"
 ---
 <Layout
-	title=""
-	description=""
-	image=""
+	title={ meta.title }
+	description={ meta.description }
+	image={ meta.cover }
 >
+	<BluppHeaderBanner />
 	<HeaderBanner />
 	<Header />
-	<Hero />
-	<About />
-	<Services />
-	<ImageBanner src={ "/expandx-web.jpg" } />
-	<ReviewsAndClients />
-	<ProjectsCoverage />
+	<Hero data={ home_data.hero } />
+	<About data={ home_data.about }/>
+	<Services
+		data={ home_data.services }
+		specific_services={ home_data.specific_service }
+		ongoing_projects={ home_data.ongoing_projects }
+		services_pack={ home_data.services_packs }
+	/>
+	<ImageBanner data={ home_data.image_banner } src={ "/expandx-web.jpg" } />
+	<ReviewsAndClients
+		data={ home_data.reviews_and_clients }
+		clients={ home_data.clients }
+		portfolio={ home_data.portfolio }
+		reviews={ home_data.reviews }
+	/>
+	<ProjectsCoverage data={ home_data.projects_coverage } />
 	<Footer />
 </Layout>

@@ -14,7 +14,9 @@ const {
 } = Astro.props
 ---
 <div class="flex flex-col items-center gap-6">
-    <HeadingThree>{ title }</HeadingThree>
+    <div class="md:h-16">
+        <HeadingThree>{ title }</HeadingThree>
+    </div>
     <Link href={ button_link } aria_label={ aria_label }>
         <PrimaryButton>{ button_text }</PrimaryButton>
     </Link>
